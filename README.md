@@ -2,14 +2,16 @@
 # Sample PHP classes generator
 Given the following format of XML :
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <classes>
-	    <class id="Name_Of_The_Class">
-				<parent>
-					<class id="Name_Of_The_Parent_Class"/>
-				</parent>
-	    </class>
-    </classes>
+```XML
+<?xml version="1.0" encoding="utf-8"?>
+<classes>
+    <class id="Name_Of_The_Class">
+        <parent>
+            <class id="Name_Of_The_Parent_Class"/>
+        </parent>
+    </class>
+</classes>
+```
 
 *Where:*
 
@@ -33,24 +35,28 @@ Run your program against the provided **sample1.xml** and check that the result 
 
 For example, the following XML:
 
-     <?xml version="1.0" encoding="utf-8"?>
-    <classes>
-	    <class id="MyClass1"/>
-	    <class id="MyClass2">
-				<parent>
-					<class id="MyClass1"/>
-				</parent>
-	    </class>
-    </classes>
+```XML
+<?xml version="1.0" encoding="utf-8"?>
+<classes>
+    <class id="MyClass1"/>
+    <class id="MyClass2">
+        <parent>
+            <class id="MyClass1"/>
+        </parent>
+    </class>
+</classes>
+```
 
 Must produce the following PHP:
 
-    <?php
-    class MyClass1
-    {
-    }
-    class MyClass2 extends MyClass1
-    {
-    }
-   
+```PHP
+<?php
+class MyClass1
+{
+}
+class MyClass2 extends MyClass1
+{
+}
+```
+
 
