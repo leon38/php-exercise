@@ -35,12 +35,11 @@ For example, the following XML:
 
      <?xml version="1.0" encoding="utf-8"?>
     <classes>
-	    <class id="MyClass1">
-	    </class>
+	    <class id="MyClass1"/>
 	    <class id="MyClass2">
 				<parent>
-					<class id="MyClass1>
-				</class>
+					<class id="MyClass1"/>
+				</parent>
 	    </class>
     </classes>
 
