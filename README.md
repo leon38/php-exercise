@@ -6,8 +6,8 @@ Given the following format of XML :
     <classes>
 	    <class id="Name_Of_The_Class">
 				<parent>
-					<class id="Name_Of_The_Parent_Class>
-				</class>
+					<class id="Name_Of_The_Parent_Class"/>
+				</parent>
 	    </class>
     </classes>
 
