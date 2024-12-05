@@ -22,6 +22,19 @@ class XMLParser
         return $document;
     }
 
+    public function countUniqueClasses(): int
+    {
+        /**
+         * @var array<object{id:string, nodeName:string}> $items
+         */
+        $items = $this->xpath->query("//class[@id]");
+        $classes = [];
+        foreach($items as $item) {
+            $classes[$item->id] = true;
+        }
+        return count($classes);
+    }
+
     public function parseItems(): void
     {
         /**

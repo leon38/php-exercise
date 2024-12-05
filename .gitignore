@@ -1,2 +1,4 @@
 /vendor/
 /output/*
+/code-coverage/
+/.phpunit.cache/

@@ -6,6 +6,9 @@ use Damien\Combodo\XMLParser;
 use DOMDocument;
 use DOMXPath;
 
+/**
+ * @covers Damien\Combodo\XMLParser::class
+ */
 final class XMLParserTest extends TestCase
 {
     public function testClassConstructor()
@@ -13,6 +16,13 @@ final class XMLParserTest extends TestCase
         $parser = new XMLParser(__DIR__.'/../data/sample1.xml');
         $this->assertInstanceOf(DOMDocument::class, $parser->document);
         $this->assertInstanceOf(DOMXPath::class, $parser->xpath);
+    }
+
+    public function testCountUniqueClasses()
+    {
+        $parser = new XMLParser(__DIR__.'/../data/sample1.xml');
+        $nbUniqueClasses = $parser->countUniqueClasses();
+        $this->assertEquals(4, $nbUniqueClasses);
     }
 
     public function testMultipleParentsError()
@@ -55,7 +65,7 @@ final class XMLParserTest extends TestCase
         class Meu extends Ga
         {
         }
-        
+
         EOS;
         $this->assertEquals($expected, $contents);
     }

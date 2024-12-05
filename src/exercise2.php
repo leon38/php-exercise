@@ -1,6 +1,6 @@
 #!/opt/homebrew/bin/php
 <?php
-require('XMLParser.php');
+require_once('XMLParser.php');
 
 if (isset($argc) && $argc < 2) {
     print_r('This program needs the path to a file to work !');
